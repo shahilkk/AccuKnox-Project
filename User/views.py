@@ -19,7 +19,6 @@ class UserPagination(PageNumberPagination):
 class UserSearchView(generics.ListAPIView):
     serializer_class = UserSerializer
     pagination_class = UserPagination
-
     def get_queryset(self):
         search_term = self.request.query_params.get('search', '')
         if search_term:
