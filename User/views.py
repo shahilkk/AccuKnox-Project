@@ -1,7 +1,7 @@
 from django.db.models import Q
 from rest_framework import generics, status
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated,AllowAny
+from rest_framework.permissions import IsAuthenticated,IsAuthenticated
 from .models import *
 from .serializers import UserSerializer, FriendRequestSerializer ,ProfileSerializer
 from rest_framework.pagination import PageNumberPagination
@@ -28,7 +28,7 @@ class UserSearchView(generics.ListAPIView):
 
 class FriendRequestView(generics.CreateAPIView):
     serializer_class = FriendRequestSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
         to_user = User.objects.get(id=self.request.data['to_user'])
@@ -36,7 +36,7 @@ class FriendRequestView(generics.CreateAPIView):
 
 class FriendRequestActionView(generics.UpdateAPIView):
     serializer_class = FriendRequestSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
     queryset = FriendRequest.objects.all()
     lookup_field = 'id'
 
@@ -53,7 +53,7 @@ class FriendRequestActionView(generics.UpdateAPIView):
 
 class FriendListView(generics.ListAPIView):
     serializer_class = UserSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return User.objects.filter(sent_requests__to_user=self.request.user, sent_requests__status='accepted') | \
@@ -61,7 +61,7 @@ class FriendListView(generics.ListAPIView):
 
 class PendingFriendRequestsView(generics.ListAPIView):
     serializer_class = FriendRequestSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return FriendRequest.objects.filter(to_user=self.request.user, status='pending')
