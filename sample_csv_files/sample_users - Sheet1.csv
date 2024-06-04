@@ -1,0 +1,11 @@
+first_name,last_name,email,username,password
+John,Doe,john.doe@example.com,johndoe,password123
+Jane,Smith,jane.smith@example.com,janesmith,qwerty456
+Michael,Johnson,michael.johnson@example.com,mjohnson,securepass789
+Emily,Williams,emily.williams@example.com,emilyw,password!@#
+David,Brown,david.brown@example.com,dbrown,mypassword123
+Sarah,Jones,sarah.jones@example.com,sjones,password456!@#
+Robert,Miller,robert.miller@example.com,rmiller,securepass789
+Jessica,Davis,jessica.davis@example.com,jdavis,password123abc
+William,Wilson,william.wilson@example.com,wwilson,password!@#$%
+Ashley,Anderson,ashley.anderson@example.com,aanderson,securepass456
