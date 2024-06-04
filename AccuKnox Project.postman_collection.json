@@ -1,0 +1,828 @@
+{
+	"info": {
+		"_postman_id": "48ab6e6a-2c0b-4db1-9b6c-5b2e5f754f70",
+		"name": "AccuKnox Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25302624"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Search User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTA0NDUwLCJpYXQiOjE3MTc0MTgwNTAsImp0aSI6Ijk1YmZmM2RiZTU5ZDQ2Yzg4YjRjZmUzNDQ5MTBmNzNlIiwidXNlcl9pZCI6MX0.JmdM0Y4s6WgAnyOrsfoPIFE6nPafM9HDNsRCfAyvVV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"to_user\": 2\n   \n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/search/?search=test",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Friend Request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTExMTU2LCJpYXQiOjE3MTc0MjQ3NTYsImp0aSI6ImM0YWIyMDUzYmM2MjQ5ZmY5ZTZhMDYwZGU1Yzk3ZTEwIiwidXNlcl9pZCI6Mn0.joL72oFJdgkgY_iCQoXLx8JCfutZ7_yAc1WObwpp2Kc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"to_user\": 5\n   \n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/friend-request/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"friend-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Friend Request Pending",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTA0OTIyLCJpYXQiOjE3MTc0MTg1MjIsImp0aSI6ImYxMWE0YjA1MjFmYjQ2MjFhMzZmMTFhZmU1ZmFmMTAyIiwidXNlcl9pZCI6Mn0.wbGPCZuYsR5m_Uw8PVY_kfm2Y7OGRNDI7eG5hymyUMo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/friend-requests/pending/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"friend-requests",
+								"pending",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Friend Request Action",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTA1MDQzLCJpYXQiOjE3MTc0MTg2NDMsImp0aSI6ImE5ZDMzOGMwN2Q3MTRkMzdiN2Q1OTIzMWUwMWZiMzdkIiwidXNlcl9pZCI6Mn0.Qs-KRidWSuTjSUpdBLOkUh0eZgyn3ROiIWUK6oxLqdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"accepted\"\n}\n\n// rejected"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/friend-request/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"friend-request",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Friends",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTA1MDQzLCJpYXQiOjE3MTc0MTg2NDMsImp0aSI6ImE5ZDMzOGMwN2Q3MTRkMzdiN2Q1OTIzMWUwMWZiMzdkIiwidXNlcl9pZCI6Mn0.Qs-KRidWSuTjSUpdBLOkUh0eZgyn3ROiIWUK6oxLqdc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"accepted\"\n}\n\n// rejected"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/friends",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Updation",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTEyMTA3LCJpYXQiOjE3MTc0MjU3MDcsImp0aSI6ImQ3NmMwYzJmMzMwODQwNTJhMjUxYzY2Y2FkZjdhODRkIiwidXNlcl9pZCI6Mn0.TREPhtysCoCv1C8SaKO--8GkhyeMipR0LC4VB_ag2dg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bio",
+									"value": "Software Developer",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Kondotty",
+									"type": "text"
+								},
+								{
+									"key": "profile_picture",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/user/profile/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Create Posts",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTE2NDA2LCJpYXQiOjE3MTc0MzAwMDYsImp0aSI6ImY4NjhhZTYxN2NjYTQ2Y2NhZGNjYzEzZWZhMjA0N2Q5IiwidXNlcl9pZCI6Mn0.gk32CaNZCR0zoujs1dMKt7l1iLd8RfY1e4DTGx4SOzU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{   \"user\":2,\n    \"content\": \"This is a new post.\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/section/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"section",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comments",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTE2NDA2LCJpYXQiOjE3MTc0MzAwMDYsImp0aSI6ImY4NjhhZTYxN2NjYTQ2Y2NhZGNjYzEzZWZhMjA0N2Q5IiwidXNlcl9pZCI6Mn0.gk32CaNZCR0zoujs1dMKt7l1iLd8RfY1e4DTGx4SOzU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{   \"user\":2,\n    \"post\":1,\n    \"content\": \"i liked this post.\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/section/comments/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"section",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Posts",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTE4MzAwLCJpYXQiOjE3MTc0MzE5MDAsImp0aSI6ImVkODI2N2QwMWMxNDQwMzJhMWE3N2Y1MDI0MjM2N2NhIiwidXNlcl9pZCI6MX0.xgDZJ5_reFnVRmQCMonSGa3Iwz5yZKWHyAhyqssxYvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n// {   \"user\":2,\n//     \"content\": \"This is a new post.\"\n// }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/section/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"section",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Posts Like",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const jsonData = pm.response.json();",
+									"",
+									"// // Extract the value of the \"access\" key",
+									"// const accessToken = jsonData.access;",
+									"",
+									"// // Set the JWT token in the Postman environment",
+									"// pm.environment.set('JWT', `${accessToken}`);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTE4MjE2LCJpYXQiOjE3MTc0MzE4MTYsImp0aSI6Ijc4NGJhMzYzMjMxMjRmODY4NmNkY2QwOGY4MjJlMDVhIiwidXNlcl9pZCI6M30.ivglBSEzuvxBdMAa4GZfgtrrUSd5v7rAcJ8GmWQG6j8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/section/posts/1/like/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"section",
+								"posts",
+								"1",
+								"like",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token Generation",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// const jsonData = pm.response.json();",
+							"",
+							"// // Extract the value of the \"access\" key",
+							"// const accessToken = jsonData.access;",
+							"",
+							"// // Set the JWT token in the Postman environment",
+							"// pm.environment.set('JWT', `${accessToken}`);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"username\":\"shahilkhan\",\n    \"password\":\"admin\"\n}\n\n// {\n//     \"username\":\"Ashfaq\",\n//     \"password\":\"Qwerty@123\"\n// }\n\n// {\n//     \"username\": \"Test_User\",\n//     \"password\": \"WEjb@_678123\"\n// }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Adding",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NTA0NDUwLCJpYXQiOjE3MTc0MTgwNTAsImp0aSI6Ijk1YmZmM2RiZTU5ZDQ2Yzg4YjRjZmUzNDQ5MTBmNzNlIiwidXNlcl9pZCI6MX0.JmdM0Y4s6WgAnyOrsfoPIFE6nPafM9HDNsRCfAyvVV8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Test_User\",\n    \"password\": \"WEjb@_678123\",\n    \"email\": \"test@gmail.com\",\n    \"first_name\": \"test\",\n    \"last_name\": \"user\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
