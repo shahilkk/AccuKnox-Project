@@ -229,6 +229,11 @@ Users can update their profile with their location to enable location-based feat
 
 ```
 
+## Postman API Collection
+
+[download](https://github.com/shahilkk/AccuKnox-Project/blob/main/AccuKnox%20Project.postman_collection.json)
+
+
 ![App Screenshot](https://github.com/shahilkk/AccuKnox-Project/blob/main/Scrnshot/Screenshot%202024-06-04%20at%207.56.10%E2%80%AFPM.png?raw=true)
 
 ## Database Diagram
